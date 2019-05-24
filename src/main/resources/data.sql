@@ -1,0 +1,1 @@
+INSERT INTO cliente(nome) values('zezinho');
