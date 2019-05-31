@@ -24,7 +24,7 @@ public class Cliente {
 	@Temporal(value=TemporalType.TIMESTAMP)
 	private Date dataNascimento;
 	
-	@ManyToOne(cascade= {CascadeType.MERGE, CascadeType.REFRESH},optional=false)
+	@ManyToOne(cascade= {CascadeType.MERGE, CascadeType.REFRESH},optional=true)
 	private Cidade cidade;
 	
 	public Cidade getCidade() {
