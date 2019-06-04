@@ -13,12 +13,14 @@
 					<tr>
 						<th scope="col">Nome</th>
 						<th scope="col">Endereço</th>
+						<th scope="col"></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr scope="row" th:each="umcliente : ${clientes}">
 						<td th:text="${umcliente.nome}"></td>
 						<td th:text="${umcliente.endereco}"></td>
+						<td><a th:href="@{'/cliente/edit/' + ${umcliente.id}}" class="btn btn-primary btn-lg">Alterar</a></td>
 					</tr>
 				</tbody>
 			</table>
