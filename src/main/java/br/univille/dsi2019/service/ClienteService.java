@@ -10,4 +10,5 @@ import br.univille.dsi2019.model.Cliente;
 public interface ClienteService {
 	List<Cliente> getAll();
 	void save(Cliente cliente);
+	void delete(Cliente cliente);
 }
