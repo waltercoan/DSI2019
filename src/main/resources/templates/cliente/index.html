@@ -22,7 +22,9 @@
 						<td th:text="${umcliente.endereco}"></td>
 						<td><a th:href="@{'/cliente/edit/' + ${umcliente.id}}" class="btn btn-primary btn-lg">Alterar</a>
 						<button class='btn btn-danger btn-lg js-delete'
-								th:data-customer-id="${umcliente.id}">Excluir</button>
+								th:data-customer-id="${umcliente.id}">
+								<span class="oi oi-bug"></span>Excluir
+								</button>
 						</td>
 					</tr>
 				</tbody>
