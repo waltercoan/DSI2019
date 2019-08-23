@@ -1,6 +1,7 @@
 package br.univille.dsi2019.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,5 +29,10 @@ public class ClienteServiceImpl implements ClienteService{
 	@Override
 	public void delete(Cliente cliente) {
 		repository.delete(cliente);
+	}
+	
+	@Override
+	public Optional<Cliente> findById(long id) {
+		return repository.findById(id);
 	}
 }

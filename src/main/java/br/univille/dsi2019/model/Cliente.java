@@ -23,7 +23,6 @@ public class Cliente {
 	private long id;
 	@NotNull()
 	@NotEmpty(message="O campo nome não pode ser em branco")
-	@Min(value=5, message="Deve possuir pelo menos cinco caracteres")
 	@Column(length=800)
 	private String nome;
 	private String endereco;
