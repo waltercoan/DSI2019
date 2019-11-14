@@ -1,0 +1,25 @@
+version: '3.3'
+
+services:
+   dsi2019walter:
+     depends_on:
+       - dbwalter  
+     image: allaneffting/dsi2019allan:latest
+     ports:
+       - "8090:8090"
+     restart: always
+     environment:
+       - SPRING_PROFILES_ACTIVE=prod
+       - DSI2019_DB_HOST=jdbc:mysql://dbwalter:3306/dballan?useTimezone=true&serverTimezone=UTC
+       - DSI2019_DB_USERNAME=bob
+       - DSI2019_DB_PASSWORD=bob
+   dbwalter:
+     image: mysql:5.7
+     restart: always
+#     ports:
+#       - "3306:3306"
+     environment:
+       MYSQL_ROOT_PASSWORD: univille
+       MYSQL_DATABASE: dballan
+       MYSQL_USER: bob
+       MYSQL_PASSWORD: bob
